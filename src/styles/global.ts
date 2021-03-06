@@ -40,6 +40,10 @@ const GlobalStyles = createGlobalStyle`
   a{
     color: var(--highlight)
   }
+
+  .leaflet-marker-pane {
+    filter: hue-rotate(150deg);
+}
 `
 
 export default GlobalStyles
