@@ -6,7 +6,7 @@ type Place = {
   slug: string
   location: {
     latitude: number
-    longitute: number
+    longitude: number
   }
 }
 
@@ -25,10 +25,10 @@ const Map = ({ places }: MapProps) => {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       {places?.map(({ id, name, location }) => {
-        const { latitude, longitute } = location
+        const { latitude, longitude } = location
         return (
           <Marker
-            position={[latitude, longitute]}
+            position={[latitude, longitude]}
             title={name}
             key={`place-${id}`}
           />
