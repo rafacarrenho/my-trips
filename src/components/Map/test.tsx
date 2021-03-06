@@ -16,7 +16,7 @@ describe('<Map />', () => {
       slug: 'campinas',
       location: {
         latitude: 0,
-        longitute: 0
+        longitude: 0
       }
     }
 
@@ -26,7 +26,7 @@ describe('<Map />', () => {
       slug: 'sudao',
       location: {
         latitude: 300,
-        longitute: 152
+        longitude: 152
       }
     }
     render(<Map places={[place, placeTwo]} />)
