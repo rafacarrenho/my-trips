@@ -31,6 +31,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   if (!page) return { notFound: true }
   console.log(page)
   return {
+    revalidate: 60,
     props: {
       heading: page.heading,
       body: page.body.html

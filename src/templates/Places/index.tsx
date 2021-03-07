@@ -69,9 +69,11 @@ const PlacesTemplate = ({ place }: PlacesTemplateProps) => {
                 src={image.url}
                 alt={place.name}
                 key={`photo-${index}`}
-                width={100}
+                width={1000}
                 height={600}
                 quality={75}
+                objectFit="cover"
+                objectPosition="center bottom"
               />
             ))}
           </S.Gallery>
