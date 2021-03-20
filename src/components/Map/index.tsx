@@ -1,5 +1,6 @@
 import { useRouter } from 'next/dist/client/router'
 import { MapContainer, TileLayer, Marker, MapConsumer } from 'react-leaflet'
+import Leaflet from 'leaflet'
 import * as S from './styles'
 
 type Place = {
@@ -19,6 +20,13 @@ export type MapProps = {
 const MAPBOX_API_KEY = process.env.NEXT_PUBLIC_MAPBOX_API_KEY
 const MAPBOX_USERID = process.env.NEXT_PUBLIC_MAPBOX_USERID
 const MAPBOX_STYLEID = process.env.NEXT_PUBLIC_MAPBOX_STYLEID
+
+const mapPinIcon = Leaflet.icon({
+  iconUrl: '/img/location.svg',
+  iconSize: [41, 41]
+  // iconAnchor: [29, 68],
+  // popupAnchor: [170, 2]
+})
 
 const CustomTileLayer = () => {
   return MAPBOX_API_KEY ? (
@@ -68,6 +76,7 @@ const Map = ({ places }: MapProps) => {
               position={[latitude, longitude]}
               title={name}
               key={`place-${id}`}
+              icon={mapPinIcon}
               eventHandlers={{
                 click: () => {
                   router.push(`/place/${slug}`)

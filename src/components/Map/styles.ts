@@ -6,9 +6,6 @@ export const MapWrapper = styled.div`
   .leaflet-container {
     background-color: var(--background);
   }
-  .leaflet-marker-pane {
-    filter: hue-rotate(150deg);
-  }
 
   .leaflet-control-attribution.leaflet-control {
     display: none;
