@@ -1,7 +1,7 @@
 import { CloseOutline } from '@styled-icons/evaicons-outline/CloseOutline'
 import LinkWrapper from 'components/LinkWrapper'
 import * as S from './styles'
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import { useRouter } from 'next/dist/client/router'
 
 import { NextSeo } from 'next-seo'
