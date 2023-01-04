@@ -1,4 +1,4 @@
-import { useRouter } from 'next/dist/client/router'
+import { useRouter } from 'next/router'
 import { MapContainer, TileLayer, Marker } from 'react-leaflet'
 import Leaflet from 'leaflet'
 import * as S from './styles'
